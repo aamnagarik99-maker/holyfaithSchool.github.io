@@ -5,58 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holy Faith International School</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; }
-        header { background-color: #002147; color: white; padding: 20px; text-align: center; }
-        nav { background: #ceb04d; padding: 10px; text-align: center; }
-        nav a { color: #002147; text-decoration: none; font-weight: bold; margin: 0 15px; }
-        .hero { background: #002147; color: white; padding: 60px 20px; text-align: center; }
-        .welcome { padding: 40px 20px; text-align: center; }
-        .features { display: flex; justify-content: space-around; padding: 20px; background: #f4f4f4; flex-wrap: wrap; }
-        .card { background: white; padding: 20px; width: 250px; margin: 10px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
-        #inquiry { padding: 40px 20px; background-color: #f9f9f9; }
-        footer { background: #002147; color: white; text-align: center; padding: 20px; }
+        /* Smooth Scroll Effect */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+
+        /* Navigation Bar */
+        nav { 
+            background: #002147; padding: 15px; text-align: center; 
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+        }
+        nav a { color: #ceb04d; text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 14px; }
+
+        /* Sections Styling */
+        section { padding: 100px 20px; min-height: 80vh; text-align: center; }
+        
+        /* Home Section */
+        #home { 
+            background: linear-gradient(rgba(0,33,71,0.7), rgba(0,33,71,0.7)), url('school-photo.jpg');
+            background-size: cover; background-position: center;
+            color: white; display: flex; flex-direction: column; justify-content: center;
+        }
+
+        /* About Section */
+        #about { background: #ffffff; color: #333; }
+        .content-box { max-width: 800px; margin: auto; padding: 20px; border-left: 5px solid #ceb04d; background: #f9f9f9; }
+
+        /* Admission Section */
+        #admission { background: #f4f4f4; }
+        .step-card { background: white; padding: 20px; margin: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+        /* Contact Section */
+        #contact { background: #002147; color: white; }
+        input, select, textarea { width: 90%; max-width: 400px; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { background: #ceb04d; color: #002147; padding: 12px 30px; border: none; font-weight: bold; cursor: pointer; border-radius: 5px; }
+
+        footer { background: #00152e; color: #aaa; padding: 20px; font-size: 12px; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>HOLY FAITH INTERNATIONAL SCHOOL</h1>
-    <p>Empowering Minds, Shaping Futures</p>
-</header>
-
 <nav>
-    <a href="#">HOME</a> <a href="#">ABOUT</a> <a href="#">ADMISSIONS</a> <a href="#">CONTACT</a>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#admission">ADMISSION</a>
+    <a href="#contact">CONTACT</a>
 </nav>
 
-<div class="hero">
-    <h1>Welcome to Excellence</h1>
-    <p>Nurturing every child's potential in a global environment.</p>
-</div>
+<section id="home">
+    <h1 style="font-size: 2.5rem;">HOLY FAITH INTERNATIONAL SCHOOL</h1>
+    <p>Shaping Tomorrow's Leaders Today</p>
+    <br>
+    <a href="#contact" style="background:#ceb04d; color:#002147; padding:15px 25px; text-decoration:none; font-weight:bold; border-radius:5px;">INQUIRE NOW</a>
+</section>
 
-<div class="welcome">
-    <h2>Why Choose Holy Faith?</h2>
-    <p>We provide world-class education for your child's bright future.</p>
-</div>
-
-<div class="features">
-    <div class="card"><h3>Smart Labs</h3><p>Modern science and IT labs.</p></div>
-    <div class="card"><h3>Expert Faculty</h3><p>Qualified and caring teachers.</p></div>
-</div>
-
-<section id="inquiry">
-    <div style="max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-        <h2 style="text-align: center; color: #002147;">Admission Inquiry 2026</h2>
-        <form action="mailto:anilkumar.holyfaith@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="Name" placeholder="Student Name" style="width: 100%; padding: 10px; margin: 10px 0;" required>
-            <input type="tel" name="Phone" placeholder="Parent Contact" style="width: 100%; padding: 10px; margin: 10px 0;" required>
-            <button type="submit" style="width: 100%; background: #002147; color: white; padding: 10px; border: none; cursor: pointer;">Submit</button>
-        </form>
+<section id="about">
+    <h2>About Our School</h2>
+    <div class="content-box">
+        <p>Holy Faith International School is dedicated to providing excellence in education. Our mission is to nurture young minds with value-based learning and modern technology.</p>
+        <p><strong>Principal:</strong> Mr. Anil Kumar</p>
     </div>
 </section>
 
+<section id="admission">
+    <h2>Admission Process 2026</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="step-card"><h3>Step 1</h3><p>Fill Inquiry Form</p></div>
+        <div class="step-card"><h3>Step 2</h3><p>School Visit & Interview</p></div>
+        <div class="step-card"><h3>Step 3</h3><p>Document Submission</p></div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact & Admission Inquiry</h2>
+    <p>Email: anilkumar.holyfaith@gmail.com</p>
+    <form action="mailto:anilkumar.holyfaith@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Student Name" required><br>
+        <select name="Class">
+            <option>Select Class</option>
+            <option>Nursery - UKG</option>
+            <option>Class 1 - 5</option>
+            <option>Class 6 - 10</option>
+        </select><br>
+        <input type="tel" name="Phone" placeholder="Mobile Number" required><br>
+        <textarea name="Message" placeholder="Any Questions?"></textarea><br>
+        <button type="submit">SEND MESSAGE</button>
+    </form>
+</section>
+
 <footer>
-    <p>Contact: Mr. Anil Kumar | Email: anilkumar.holyfaith@gmail.com</p>
-    <p>&copy; 2026 Holy Faith International School.</p>
+    <p>&copy; 2026 Holy Faith International School | All Rights Reserved</p>
 </footer>
 
 </body>
